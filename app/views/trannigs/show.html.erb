@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @trannig.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @trannig.description %>
+</p>
+
+<p>
+  <strong>Company:</strong>
+  <%= @trannig.company %>
+</p>
+
+<%= link_to 'Edit', edit_trannig_path(@trannig) %> |
+<%= link_to 'Back', trannigs_path %>

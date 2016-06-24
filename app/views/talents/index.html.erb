@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Talents</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @talents.each do |talent| %>
+      <tr>
+        <td><%= talent.name %></td>
+        <td><%= talent.description %></td>
+        <td><%= link_to 'Show', talent %></td>
+        <td><%= link_to 'Edit', edit_talent_path(talent) %></td>
+        <td><%= link_to 'Destroy', talent, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Talent', new_talent_path %>

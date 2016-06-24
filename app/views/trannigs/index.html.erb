@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Trannigs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Company</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @trannigs.each do |trannig| %>
+      <tr>
+        <td><%= trannig.name %></td>
+        <td><%= trannig.description %></td>
+        <td><%= trannig.company %></td>
+        <td><%= link_to 'Show', trannig %></td>
+        <td><%= link_to 'Edit', edit_trannig_path(trannig) %></td>
+        <td><%= link_to 'Destroy', trannig, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Trannig', new_trannig_path %>
