@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  devise_for :users
+  resources :roles
+  resources :users
   resources :jobs
   resources :talents
   resources :services
